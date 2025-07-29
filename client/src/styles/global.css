@@ -1,0 +1,44 @@
+/* /client/src/styles/global.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap');
+
+/* CSS Custom Properties (Our "Micro Design System") */
+:root {
+    --color-primary: #006400; /* Nigerian Green */
+    --color-primary-dark: #004500;
+    --color-accent: #007bff; /* A nice blue for actions */
+    --color-accent-dark: #0056b3;
+    --color-text: #333;
+    --color-text-light: #666;
+    --color-background: #f4f7f6;
+    --color-surface: #ffffff;
+    --color-error: #d9534f;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --border-radius: 8px;
+}
+
+/* Basic Reset and Global Settings */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}

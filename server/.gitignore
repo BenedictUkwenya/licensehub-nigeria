@@ -1,0 +1,23 @@
+# /server/.gitignore
+
+# Dependencies
+node_modules
+
+# Compiled JavaScript
+dist
+
+# Environment variables
+.env
+
+
+# Ignore node_modules in both client and server
+client/node_modules
+server/node_modules
+server/dist
+
+# Ignore environment files
+server/.env
+
+# Mac and Windows junk files
+.DS_Store
+Thumbs.db

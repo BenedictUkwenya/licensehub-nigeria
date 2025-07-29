@@ -1,0 +1,100 @@
+/* /client/src/components/layout/Header/Header.module.css */
+
+.header {
+    background-color: var(--color-surface);
+    padding: 0 2rem;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* For the mobile menu */
+}
+
+.logo a {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navLink {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.navLink:hover {
+    color: var(--color-primary);
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-primary);
+    background-color: transparent;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.button:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.buttonPrimary {
+    composes: button; /* This "inherits" the .button styles */
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.buttonPrimary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.welcomeText {
+    font-weight: 500;
+}
+
+/* --- Mobile Menu Styles --- */
+.menuIcon {
+    display: none; /* Hidden on desktop */
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menuIcon {
+        display: block; /* Show on mobile */
+    }
+
+    .nav {
+        /* Mobile menu appears from top */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: var(--color-surface);
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 1.5rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        /* Hide/Show logic will be handled by React state */
+        display: none; 
+    }
+
+    .nav.open {
+        display: flex;
+    }
+}

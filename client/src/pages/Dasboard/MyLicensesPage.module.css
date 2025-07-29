@@ -1,0 +1,169 @@
+/* /client/src/pages/Dashboard/MyLicensesPage.module.css */
+
+/* --- Page Header --- */
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 1.5rem;
+}
+.pageHeader h1 {
+    color: var(--color-primary);
+    font-weight: 600; /* Slightly less bold for a modern feel */
+}
+
+/* --- Buttons --- */
+.button { /* A new base button class for consistency */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.addButton {
+    composes: button;
+    background: linear-gradient(45deg, var(--color-primary), #007d00);
+    color: white;
+}
+.addButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 100, 0, 0.2);
+}
+.cancelButton {
+    composes: button;
+    background-color: #f1f3f5;
+    color: #495057;
+}
+.cancelButton:hover {
+    background-color: #e9ecef;
+}
+
+
+/* --- Form Styles --- */
+.form {
+    background-color: #fdfdff; /* Slightly off-white */
+    padding: 2.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: 12px; /* More rounded */
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: fadeIn 0.5s ease-out;
+}
+.form h2 {
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+}
+.formGroup { display: flex; flex-direction: column; }
+.label { 
+    margin-bottom: 0.5rem; 
+    font-weight: 500; 
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+.input {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: var(--border-radius);
+    background-color: white;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.15);
+}
+.formButtons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+
+/* --- License List --- */
+.licenseList {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1.5rem;
+}
+.licenseCard {
+    position: relative;
+    padding: 1.5rem;
+    background-color: var(--color-surface);
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    overflow: hidden; /* Important for the pseudo-element */
+}
+.licenseCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.licenseCard h3 { margin-bottom: 0.5rem; font-weight: 600; }
+.licenseCard p { margin: 0.25rem 0; color: var(--color-text-light); }
+.licenseCard strong { color: var(--color-text); font-weight: 500;}
+
+/* New: Status "Pill" that sits inside the card */
+.statusPill {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border-radius: 9999px; /* Pill shape */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Status colors using modern rgb() with opacity for a softer look */
+.status_active { 
+    background-color: rgba(40, 167, 69, 0.1); /* Green */
+    color: #1c7430; 
+}
+.status_expiring_soon { 
+    background-color: rgba(255, 193, 7, 0.15); /* Yellow */
+    color: #b98900;
+}
+.status_expired { 
+    background-color: rgba(220, 53, 69, 0.1); /* Red */
+    color: #a52834;
+}
+
+/* Replaces the old left-border indicator with a subtle pseudo-element */
+.licenseCard::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    transition: background-color 0.2s;
+}
+
+.card_active::before { background-color: #28a745; }
+.card_expiring_soon::before { background-color: #ffc107; }
+.card_expired::before { background-color: #dc3545; }
+
+
+/* --- Keyframe Animations --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

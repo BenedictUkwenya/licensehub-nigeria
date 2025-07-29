@@ -1,0 +1,28 @@
+/* /client/src/pages/Dashboard/OverviewPage.module.css */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+.statCard {
+    background-color: var(--color-surface);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--color-primary);
+}
+.statCard h3 {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+}
+.statCard .statNumber {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.welcomeMessage {
+    margin-bottom: 2rem;
+}

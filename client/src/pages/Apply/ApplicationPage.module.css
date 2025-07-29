@@ -1,0 +1,47 @@
+/* /client/src/pages/Apply/ApplicationPage.module.css */
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.title {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+.subtitle {
+    margin-bottom: 2rem;
+    color: var(--color-text-light);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
+}
+
+.form { display: flex; flex-direction: column; gap: 1.5rem; }
+.formGroup { display: flex; flex-direction: column; }
+.label { margin-bottom: 0.5rem; font-weight: 500; }
+.input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    color: white;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-end;
+}
+.button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

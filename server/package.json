@@ -2,12 +2,12 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
-"scripts": {
-  "build": "npx tsc",
-  "start": "node dist/server.js",
-  "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-  "seed": "ts-node seeder.ts"
-},
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "seed": "ts-node seeder.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,7 +19,8 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.18.0",
-    "mongoose": "^8.16.5"
+    "mongoose": "^8.16.5",
+    "rimraf": "^6.0.1"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",

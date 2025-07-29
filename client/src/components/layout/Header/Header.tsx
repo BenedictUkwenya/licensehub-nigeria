@@ -1,6 +1,6 @@
 // /client/src/components/layout/Header/Header.tsx
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../../context/AuthContext';
 import styles from './Header.module.css';

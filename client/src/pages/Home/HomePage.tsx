@@ -1,7 +1,6 @@
 // /client/src/pages/Home/HomePage.tsx
 
-import React, { useState } from 'react';
-import axios from 'axios';
+import  { useState } from 'react';
 import styles from './HomePage.module.css';
 import { Link } from 'react-router-dom'; 
 import api from '../../services/api'; 

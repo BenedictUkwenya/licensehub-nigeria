@@ -1,6 +1,5 @@
 // /client/src/pages/Dashboard/ProfilePage.tsx
 
-import React from 'react';
 import { useAuth } from '../../context/AuthContext';
 // Reuse the same styles for consistency
 import styles from './MyLicensesPage.module.css'; 

@@ -1,5 +1,5 @@
 // /client/src/pages/Dashboard/BusinessAppsPage.tsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import api from '../../services/api';
 // We can reuse the same styles from the other dashboard page for consistency
 import styles from './MyLicensesPage.module.css';

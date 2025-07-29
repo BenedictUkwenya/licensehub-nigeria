@@ -1,6 +1,6 @@
 // /client/src/pages/Apply/ApplicationPage.tsx
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import styles from './ApplicationPage.module.css';
 import api from '../../services/api';

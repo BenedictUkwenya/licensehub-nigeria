@@ -1,6 +1,6 @@
 // /client/src/pages/Login/LoginPage.tsx
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom'; // No need for useNavigate, context handles it
 import axios from 'axios';
 import styles from './LoginPage.module.css';

@@ -17,9 +17,6 @@ import BusinessAppsPage from './pages/Dasboard/BusinessAppsPage';
 import ProfilePage from './pages/Dasboard/ProfilePage';
 import OverviewPage from './pages/Dasboard/OverviewPage';
 // Placeholder components for other dashboard pages
-const DashboardOverview = () => <h1>Dashboard Overview</h1>;
-const BusinessApps = () => <h1>My Business Applications</h1>;
-const Profile = () => <h1>My Profile</h1>;
 // /client/src/App.tsx
  
 

@@ -1,6 +1,6 @@
 // /client/src/pages/Register/RegisterPage.tsx
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import styles from './RegisterPage.module.css'; // <-- Import the CSS Module
